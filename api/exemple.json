@@ -1,0 +1,23 @@
+{
+    "_IMPORTANT" : "Delete this file after setting up your own api! Errors may occour.",
+
+    "general": 
+    [
+        {
+        "discord_id": "1234567890", 
+        "guilded_id": "ABcd1Ef3", 
+        "state": "0", 
+        "sender": "", 
+        "reciever": "", 
+        "discord_channel": "1234567890", 
+        "guilded_channel": ""
+        }
+    ], 
+    "meta": 
+    [
+        {
+        "text": "", 
+        "sender": ""
+        }
+    ]
+}
