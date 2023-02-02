@@ -1,6 +1,5 @@
 import traceback
 import nextcord
-import json
 from nextcord.ext import commands
 import config
 import asyncio
@@ -17,8 +16,8 @@ async def on_ready():
                 client.load_extension(f'cogs.{filename[:-3]}')
             except:
                 traceback.print_exc()
-    client.loop.create_task(sync_commands())
     client.loop.create_task(change_presence())
+    client.loop.create_task(sync_commands())
 
 
 async def sync_commands():
@@ -28,10 +27,11 @@ async def sync_commands():
 
 
 async def change_presence():
-    await client.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.watching, name="Your Guilded Server"))
+    await client.change_presence(
+        activity=nextcord.Activity(type=nextcord.ActivityType.watching, name="Your Guilded Server"))
     await asyncio.sleep(30)
     await client.change_presence(activity=nextcord.Activity(type=nextcord.ActivityType.watching, name="Guildcord API"))
     await asyncio.sleep(30)
 
 
-client.run(config.TOKEN)
+client.run(config.DISCORD_TOKEN)
