@@ -70,7 +70,7 @@ class main(commands.Cog):
         except:
             traceback.print_exc()
 
-    @application_command.slash_command(name="api-data", description="Get the data of your server and group")
+    @application_command.slash_command(name="api-data", description="Get the data of your server and group", default_member_permissions=8)
     async def getdata(self, interaction: nextcord.Interaction):
         try:
             data = open(f"./api/{interaction.guild.id}.json")
@@ -81,7 +81,7 @@ class main(commands.Cog):
             await interaction.response.send_message(":x: - We did not found any data belonging to this server.",
                                                     ephemeral=True)
 
-    @application_command.slash_command(name="delete-server", description="Delete your servers in our API.")
+    @application_command.slash_command(name="delete-server", description="Delete your servers in our API.", default_member_permissions=8)
     async def delete_server(self, interaction: nextcord.Interaction):
         try:
             cog = client.extensions.get(client.extensions, name="cogs.forward")
@@ -95,7 +95,7 @@ class main(commands.Cog):
             await interaction.response.send_message(":x: - We did not found any data of your servers.", ephemeral=True)
             traceback.print_exc()
 
-    @application_command.slash_command(name="config", description="Edit your configuration in our API.")
+    @application_command.slash_command(name="config", description="Edit your configuration in our API.", default_member_permissions=8)
     async def config(self, interaction: nextcord.Interaction, discord_id: int = None,
                      discord_channel: nextcord.TextChannel = None, guilded_id: str = None, guilded_channel: str = None):
         try:

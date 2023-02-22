@@ -24,7 +24,7 @@ class commiter(commands.Cog):
                     api = json.load(api_raw)
                     discord_channel_check = api["general"][0]["discord_channel"]
                     if message.channel.id == int(discord_channel_check):
-                        if message.author.id != self.client.user.id:
+                        if not message.author.bot:
                             if not message.webhook_id:
                                 discord_mod_log_channel_id = api["general"][0]["discord-mod-logs-channel-id"]
                                 guilded_mod_log_channel_id = api["general"][0]["guilded-mod-logs-channel-id"]
