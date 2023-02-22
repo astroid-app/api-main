@@ -1,23 +1,36 @@
 {
     "_IMPORTANT" : "Delete this file after setting up your own api! Errors may occour.",
 
-    "general": 
-    [
+    "general": [
         {
-        "discord_id": "1234567890", 
-        "guilded_id": "ABcd1Ef3", 
-        "state": "0", 
-        "sender": "", 
-        "reciever": "", 
-        "discord_channel": "1234567890", 
-        "guilded_channel": ""
+            "discord_id": 123456789,
+            "guilded_id": 123456789,
+            "state": "0",
+            "sender": null,
+            "receiver": "",
+            "discord_channel": 123456789,
+            "guilded_channel": "ab1c-def2g-hij3k",
+            "discord-webhook-url": "https://discord.com/api/webhooks/123456789/abcd123.efgh",
+            "guilded-webhook-url": "https://media.guilded.gg/webhooks/abcde-fghi-jklm-opqr-stuvw-xyz/abcd123.efgh",
+            "discord-mod-logs-channel-id": "123456789",
+            "guilded-mod-logs-channel-id": "ab1c-def2g-hij3k"
         }
-    ], 
-    "meta": 
-    [
+    ],
+    "meta": [
         {
-        "text": "", 
-        "sender": ""
+            "text": "",
+            "author-profile": "",
+            "sender": "",
+            "sender-id": "",
+            "cdn":
+                {
+                    "is-cdn": false,
+                    "attachments": [
+                        {
+                            "url": ""
+                        }
+                    ]
+                }
         }
     ]
 }
